@@ -1,0 +1,12 @@
+{
+    "model_name": "ExtraTrees",
+    "selected_threshold": 0.2,
+    "precision": 0.5517241379310345,
+    "recall": 0.9411764705882353,
+    "f1": 0.6956521739130435,
+    "f2": 0.8247422680412371,
+    "true_positive_planets": 16,
+    "missed_planets": 1,
+    "false_planet_alerts": 13,
+    "selection_rule": "Best F2 score to prioritize planet recall"
+}

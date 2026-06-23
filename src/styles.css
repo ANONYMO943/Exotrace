@@ -1,0 +1,194 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-violet: var(--violet);
+  --color-cyan: var(--cyan);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+:root {
+  --radius: 0.875rem;
+
+  --background: oklch(0.16 0.035 264);
+  --foreground: oklch(0.96 0.01 240);
+
+  --card: oklch(0.21 0.04 264);
+  --card-foreground: oklch(0.96 0.01 240);
+
+  --popover: oklch(0.19 0.04 264);
+  --popover-foreground: oklch(0.96 0.01 240);
+
+  --primary: oklch(0.78 0.14 200);
+  --primary-foreground: oklch(0.16 0.04 264);
+
+  --secondary: oklch(0.27 0.045 266);
+  --secondary-foreground: oklch(0.96 0.01 240);
+
+  --muted: oklch(0.26 0.04 266);
+  --muted-foreground: oklch(0.68 0.03 250);
+
+  --accent: oklch(0.62 0.21 292);
+  --accent-foreground: oklch(0.98 0.01 240);
+
+  --destructive: oklch(0.62 0.23 18);
+  --destructive-foreground: oklch(0.98 0.01 240);
+
+  --success: oklch(0.74 0.17 160);
+  --success-foreground: oklch(0.16 0.04 264);
+
+  --warning: oklch(0.82 0.16 78);
+  --warning-foreground: oklch(0.16 0.04 264);
+
+  --border: oklch(0.32 0.045 266 / 60%);
+  --input: oklch(0.3 0.045 266);
+  --ring: oklch(0.78 0.14 200);
+
+  --cyan: oklch(0.82 0.14 200);
+  --violet: oklch(0.66 0.21 292);
+
+  --chart-1: oklch(0.82 0.14 200);
+  --chart-2: oklch(0.66 0.21 292);
+  --chart-3: oklch(0.74 0.17 160);
+  --chart-4: oklch(0.82 0.16 78);
+  --chart-5: oklch(0.7 0.18 18);
+
+  --sidebar: oklch(0.18 0.04 265);
+  --sidebar-foreground: oklch(0.9 0.02 240);
+  --sidebar-primary: oklch(0.78 0.14 200);
+  --sidebar-primary-foreground: oklch(0.16 0.04 264);
+  --sidebar-accent: oklch(0.26 0.05 268);
+  --sidebar-accent-foreground: oklch(0.96 0.01 240);
+  --sidebar-border: oklch(0.3 0.045 266 / 50%);
+  --sidebar-ring: oklch(0.78 0.14 200);
+
+  --gradient-cosmic: linear-gradient(135deg, oklch(0.66 0.21 292) 0%, oklch(0.78 0.14 200) 100%);
+  --gradient-violet: linear-gradient(135deg, oklch(0.4 0.18 292) 0%, oklch(0.66 0.21 292) 100%);
+  --gradient-cyan: linear-gradient(135deg, oklch(0.5 0.12 210) 0%, oklch(0.82 0.14 200) 100%);
+  --glow-cyan: 0 0 0 1px oklch(0.82 0.14 200 / 25%), 0 12px 40px -12px oklch(0.82 0.14 200 / 45%);
+  --glow-violet: 0 0 0 1px oklch(0.66 0.21 292 / 25%), 0 12px 40px -12px oklch(0.66 0.21 292 / 45%);
+}
+
+@theme inline {
+  --background-image-gradient-cosmic: var(--gradient-cosmic);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Starfield backdrop */
+@utility star-field {
+  background-color: oklch(0.13 0.03 264);
+  background-image:
+    radial-gradient(1200px 600px at 80% -10%, oklch(0.62 0.21 292 / 22%), transparent 60%),
+    radial-gradient(1000px 700px at 0% 10%, oklch(0.78 0.14 200 / 16%), transparent 55%),
+    radial-gradient(2px 2px at 20% 30%, oklch(0.95 0.01 240 / 70%), transparent),
+    radial-gradient(2px 2px at 60% 70%, oklch(0.95 0.01 240 / 60%), transparent),
+    radial-gradient(1.5px 1.5px at 75% 20%, oklch(0.82 0.14 200 / 80%), transparent),
+    radial-gradient(1.5px 1.5px at 40% 80%, oklch(0.95 0.01 240 / 50%), transparent),
+    radial-gradient(1px 1px at 90% 50%, oklch(0.66 0.21 292 / 80%), transparent),
+    radial-gradient(1px 1px at 10% 60%, oklch(0.95 0.01 240 / 60%), transparent);
+}
+
+@utility glass-card {
+  background: linear-gradient(160deg, oklch(0.24 0.045 266 / 70%), oklch(0.19 0.04 264 / 80%));
+  backdrop-filter: blur(12px);
+  border: 1px solid oklch(0.4 0.05 266 / 40%);
+}
+
+@utility glow-cyan {
+  box-shadow: var(--glow-cyan);
+}
+
+@utility glow-violet {
+  box-shadow: var(--glow-violet);
+}
+
+@utility text-gradient {
+  background: var(--gradient-cosmic);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@utility animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@utility animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}

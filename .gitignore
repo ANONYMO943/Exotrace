@@ -1,0 +1,24 @@
+# Node
+node_modules/
+dist/
+.env
+.env.local
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Generated backend outputs
+backend/__pycache__/
+backend/outputs/
+
+# Generated data
+backend/data/lightcurves/
+backend/data/processed/
+
+# Large astronomy files
+*.fits
+*.fits.gz
+*.csv.gz
