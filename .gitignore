@@ -13,6 +13,9 @@ __pycache__/
 # Generated backend outputs
 backend/__pycache__/
 backend/outputs/
+!backend/outputs/results/full_predictions.csv
+!backend/outputs/results/full_prediction_summary.json
+!backend/outputs/results/top_planet_candidates.csv
 
 # Generated data
 backend/data/lightcurves/
