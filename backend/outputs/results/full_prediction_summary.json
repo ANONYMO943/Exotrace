@@ -1,0 +1,87 @@
+{
+    "project": "ExoTrace",
+    "purpose": "Full batch prediction report for all dataset light curves",
+    "total_predictions": 150,
+    "class_counts": {
+        "planet": 50,
+        "false_positive": 50,
+        "eclipsing_binary": 50
+    },
+    "predicted_label_counts": {
+        "eclipsing_binary": 54,
+        "false_positive": 53,
+        "planet": 43
+    },
+    "candidate_counts": {
+        "True": 90,
+        "False": 60
+    },
+    "candidate_priority_counts": {
+        "medium": 66,
+        "low": 60,
+        "high": 24
+    },
+    "decision_counts": {
+        "Possible planet candidate": 66,
+        "Likely eclipsing binary": 45,
+        "Strong planet candidate": 24,
+        "Likely false positive": 15
+    },
+    "high_priority_candidate_count": 24,
+    "classification_metrics": {
+        "accuracy": 0.9,
+        "classification_report": {},
+        "confusion_matrix": {
+            "labels": [
+                "planet",
+                "false_positive",
+                "eclipsing_binary"
+            ],
+            "matrix": [
+                [
+                    40,
+                    8,
+                    2
+                ],
+                [
+                    3,
+                    45,
+                    2
+                ],
+                [
+                    0,
+                    0,
+                    50
+                ]
+            ]
+        }
+    },
+    "candidate_screening_metrics": {
+        "meaning": "Binary screening: true planet is positive class, predicted candidate is positive.",
+        "precision": 0.5444444444444444,
+        "recall": 0.98,
+        "f1": 0.7,
+        "true_positive_planets": 49,
+        "missed_planets": 1,
+        "false_planet_alerts": 41,
+        "true_non_planets": 59,
+        "candidate_confusion_matrix": {
+            "labels": [
+                "not_planet",
+                "planet"
+            ],
+            "matrix": [
+                [
+                    59,
+                    41
+                ],
+                [
+                    1,
+                    49
+                ]
+            ]
+        }
+    },
+    "model_name": "ExtraTrees",
+    "runtime_seconds": 0.0
+}
